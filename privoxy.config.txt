@@ -1,0 +1,26 @@
+confdir /usr/local/etc/privoxy
+logdir /usr/local/var/log/privoxy
+actionsfile match-all.action
+actionsfile default.action   			# Main actions file
+actionsfile block-trackers.action 		# Block all trackers
+#actionsfile block-facebook.action 		# Block Facebook trackers
+actionsfile user.action      			# User customizations
+filterfile default.filter
+#filterfile plus-one.filterfile 		# Block Google+ script
+filterfile user.filter      			# User customizations
+logfile logfile
+listen-address 127.0.0.1:8118
+toggle 1
+enable-remote-toggle 1
+enable-remote-http-toggle 1
+enable-edit-actions 1
+enforce-blocks 0
+buffer-limit 4096
+enable-proxy-authentication-forwarding 0
+forwarded-connect-retries 0
+accept-intercepted-requests 0
+allow-cgi-request-crunching 0
+split-large-forms 0
+keep-alive-timeout 5
+tolerate-pipelining 1
+socket-timeout 300

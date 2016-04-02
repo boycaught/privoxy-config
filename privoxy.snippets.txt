@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Group</key>
+  <string>_privoxy</string>
+  <key>Label</key>
+  <string>homebrew.mxcl.privoxy</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/sbin/privoxy</string>
+    <string>--chroot</string>
+    <string>--no-daemon</string>
+    <string>/usr/local/etc/privoxy/config</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardErrorPath</key>
+  <string>/var/log/privoxy/logfile.log</string>
+  <key>StandardOutPath</key>
+  <string>/var/log/privoxy/logfile.log</string>
+  <key>User</key>
+  <string>_privoxy</string>
+</dict>
+</plist>
+
+<dict>
+  <key>Label</key>
+  <string>org.privoxy.launchd.privoxy</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/sbin/privoxy</string>
+    <string>--user</string>
+    <string>privoxy</string>
+    <string>/usr/local/etc/privoxy/config</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
+
+
+
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>org.privoxy.launchd.privoxy</string>
+  <key>User</key>
+  <string>privoxy</string>
+  <key>Group</key>
+  <string>privoxy</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/sbin/privoxy</string>
+    <string>--chroot</string>
+    <string>--no-daemon</string>
+    <string>/usr/local/etc/privoxy/config</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardErrorPath</key>
+  <string>/usr/local/var/log/privoxy/logfile</string>
+  <key>StandardOutPath</key>
+  <string>/usr/local/var/log/privoxy/logfile</string>
+</dict>
+</plist>
+
+
+<plist version="1.0">
+  <dict>
+  <key>Label</key>
+  <string>org.privoxy.launchd.privoxy</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/sbin/privoxy</string>
+    <string>--user</string>
+    <string>privoxy</string>
+    <string>/usr/local/etc/privoxy/config</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  </dict>
+</plist>
